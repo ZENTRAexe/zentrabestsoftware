@@ -33,12 +33,9 @@ body{
 
 /* HERO */
 .hero{
-  position:relative;
   text-align:center;
-
-  height:360px;          /* ⬅️ ASIL KÜÇÜLTEN BU */
-  padding:40px 20px;     /* ⬅️ daha sıkı */
-
+  position:relative;
+  padding:80px 20px;
   border-radius:22px;
   border:1.5px solid #2b0055;
   box-shadow:
@@ -46,24 +43,21 @@ body{
     0 0 40px #3a006640;
   background:#07070c;
   overflow:hidden;
-  margin-bottom:60px;
+  margin-bottom:80px;
 }
 
-/* HERO ARKA PLAN VIDEO */
-.hero-bg-video{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:blur(18px) brightness(0.45);
-  z-index:0;
+.logo-video{
+  width:140px;
+  margin:0 auto 20px;
+  display:block;
+  border-radius:12px;
+  filter:drop-shadow(0 0 25px #7a00ff60);
+  animation: float 4s ease-in-out infinite;
 }
 
-/* HERO içeriği önde */
-.hero > *{
-  position:relative;
-  z-index:2;
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
 }
 
 .hero h1{
@@ -116,6 +110,7 @@ body{
 
 /* SECTIONS */
 .section{margin-top:90px}
+
 h2{color:var(--purple2)}
 
 .list li{
@@ -222,8 +217,7 @@ h2{color:var(--purple2)}
 
   <!-- HERO -->
   <div class="hero">
-
-    <video class="hero-bg-video" autoplay muted loop playsinline>
+    <video class="logo-video" autoplay muted loop playsinline>
       <source src="WhatsApp Video 2026-01-20 at 01.53.41.mp4" type="video/mp4">
     </video>
 
