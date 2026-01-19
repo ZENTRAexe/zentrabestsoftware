@@ -177,10 +177,18 @@ h2{color:var(--purple2)}
 }
 
 .trust div{
-  background:#0e0020;
-  padding:25px;
-  border-radius:14px;
-  border:1px solid #2b0055;
+  background:linear-gradient(180deg,#140022,var(--card));
+  padding:28px;
+  border-radius:16px;
+  border:1.5px solid #2b0055;
+  box-shadow:0 0 22px #3a006620;
+  transition:.25s ease;
+}
+
+.trust div:hover{
+  border-color:#7a00ff;
+  box-shadow:0 0 35px #7a00ff30;
+  transform:translateY(-4px);
 }
 
 /* FOOTER */
