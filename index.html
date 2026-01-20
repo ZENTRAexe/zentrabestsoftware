@@ -34,19 +34,25 @@ body{
 /* HERO */
 .hero{
   text-align:center;
-  padding:55px 20px;
+  padding:70px 20px;
   border-radius:22px;
   border:1.5px solid #2b0055;
-  box-shadow:
-    inset 0 0 0 1px #1a0033,
-    0 0 40px #3a006640;
+  box-shadow:inset 0 0 0 1px #1a0033, 0 0 40px #3a006640;
   background:#07070c;
-  margin-bottom:70px;
+}
+
+.logo-video{
+  width:120px;
+  margin:0 auto 26px;
+  display:block;
+  border-radius:16px;
+  filter:
+    drop-shadow(0 0 30px #7a00ff80)
+    drop-shadow(0 0 60px #b100ff40);
 }
 
 .hero h1{
   font-size:48px;
-  letter-spacing:2px;
   color:var(--purple2);
 }
 
@@ -59,7 +65,7 @@ body{
   display:inline-flex;
   align-items:center;
   gap:10px;
-  margin-top:20px;
+  margin-top:18px;
   padding:8px 18px;
   border-radius:50px;
   background:#0d1a14;
@@ -78,28 +84,49 @@ body{
 .btn{
   display:inline-block;
   margin-top:28px;
-  padding:15px 34px;
+  padding:15px 36px;
   background:linear-gradient(90deg,var(--purple),var(--purple2));
   color:white;
   text-decoration:none;
   font-weight:bold;
   border-radius:10px;
-  transition:.2s;
+  transition:.25s ease;
 }
 
 .btn:hover{
   transform:scale(1.06);
-  box-shadow:0 0 18px var(--purple2);
+  box-shadow:0 0 20px var(--purple2);
 }
 
-/* SECTIONS */
-.section{margin-top:80px}
+/* SECTION */
+.section{margin-top:90px}
+
 h2{
   color:var(--purple2);
   text-align:center;
+  margin-bottom:35px;
 }
 
-/* ÜRÜN KARTLARI */
+/* KART ORTAK HOVER */
+.card,
+.trust div,
+.value-card{
+  background:linear-gradient(180deg,#140022,var(--card));
+  border-radius:16px;
+  border:1.5px solid #2b0055;
+  box-shadow:0 0 22px #3a006620;
+  transition:.25s ease;
+}
+
+.card:hover,
+.trust div:hover,
+.value-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--purple);
+  box-shadow:0 0 40px #7a00ff40;
+}
+
+/* ÜRÜNLER */
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -107,20 +134,9 @@ h2{
 }
 
 .card{
-  background:linear-gradient(180deg,#140022,var(--card));
-  border-radius:16px;
-  border:1.5px solid #2b0055;
-  box-shadow:0 0 22px #3a006620;
   overflow:hidden;
   display:flex;
   flex-direction:column;
-  transition:.25s ease;
-}
-
-.card:hover{
-  border-color:#7a00ff;
-  box-shadow:0 0 35px #7a00ff30;
-  transform:translateY(-4px);
 }
 
 .card-img{
@@ -131,34 +147,20 @@ h2{
 
 .card-content{
   padding:30px;
-  flex:1;
   display:flex;
   flex-direction:column;
-  border-top:1px solid #26004d;
+  flex:1;
 }
 
 .card h3{
-  background:#0b0018;
-  padding:10px;
-  border-radius:10px;
-  border:1px solid #26004d;
   text-align:center;
   color:#d39cff;
 }
 
 .price{
-  font-size:28px;
+  font-size:26px;
   color:var(--green);
-  margin:18px 0;
-}
-  .logo-video{
-  width:120px;
-  margin:0 auto 26px;
-  display:block;
-  border-radius:16px;
-  filter:
-    drop-shadow(0 0 30px #7a00ff80)
-    drop-shadow(0 0 60px #b100ff40);
+  margin:14px 0;
 }
 
 .card-content a{
@@ -172,59 +174,37 @@ h2{
   font-weight:bold;
 }
 
-.card-content a:hover{
-  background:var(--purple2);
-}
-
 /* NEDEN BİZ */
 .trust{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:25px;
-  margin-top:30px;
 }
 
 .trust div{
-  background:linear-gradient(180deg,#140022,var(--card));
   padding:28px;
-  border-radius:16px;
-  border:1.5px solid #2b0055;
-  box-shadow:0 0 22px #3a006620;
-  transition:.25s ease;
 }
 
-.trust div:hover{
-  border-color:#7a00ff;
-  box-shadow:0 0 35px #7a00ff30;
-  transform:translateY(-4px);
-}
-
-.trust h3{
-  text-align:center;
-  color:#d39cff;
-}
-
-/* SİSTEM ÖZELLİKLERİ (BAŞLIKSIZ – GENİŞ KART) */
-.system-wide{
+/* DEĞER KARTLARI */
+.values{
   margin-top:30px;
-  background:linear-gradient(180deg,#140022,var(--card));
-  padding:30px;
-  border-radius:18px;
-  border:1.5px solid #2b0055;
-  box-shadow:0 0 22px #3a006620;
-}
-
-.system-wide ul{
-  list-style:none;
-  padding:0;
-  margin:0;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:12px 30px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
 }
 
-.system-wide li{
+.value-card{
+  padding:28px;
+}
+
+.value-card h3{
+  color:#d39cff;
+  margin-bottom:10px;
+}
+
+.value-card p{
   color:#dcdcdc;
+  font-size:15px;
 }
 
 /* FOOTER */
@@ -242,97 +222,98 @@ h2{
 
 <div class="container">
 
-  <!-- HERO -->
-  <div class="hero">
+<!-- HERO -->
+<div class="hero">
   <video class="logo-video" autoplay muted loop playsinline>
     <source src="WhatsApp Video 2026-01-20 at 01.53.41.mp4" type="video/mp4">
   </video>
-  <div class="hero">
-    <h1>ZENTRA MARKET</h1>
-    <p>Discord üzerinden profesyonel dijital satış</p>
 
-    <div class="status">
-      <span></span> ONLINE • SATIŞ AKTİF
-    </div>
+  <h1>ZENTRA MARKET</h1>
+  <p>Discord üzerinden profesyonel dijital satış</p>
 
-    <a href="https://discord.gg/BavNPK942y" class="btn">DİSCORD'A KATIL</a>
-  </div>
+  <div class="status"><span></span> ONLINE • SATIŞ AKTİF</div>
 
-  <!-- ÜRÜNLER -->
-  <div class="section">
-    <h2>Satış Paketleri</h2>
+  <a href="https://discord.gg/BavNPK942y" class="btn">DİSCORD'A KATIL</a>
 
-    <div class="cards">
+  <p style="margin-top:16px;color:#aaa;font-size:14px;">
+    ✔ Anında Teslim • ✔ Güvenli Alışveriş • ✔ Aktif Destek
+  </p>
+</div>
 
-      <div class="card">
-        <img src="pubgfoto2.jpeg" class="card-img">
-        <div class="card-content">
-          <h3>⚡ PUBG MOBILE ANDROID HACK</h3>
-          <p>1 SEZON</p>
-          <div class="price">700 TL</div>
-          <p>SINIRSIZ</p>
-          <div class="price">1400 TL</div>
-          <a href="https://discord.gg/BavNPK942y" target="_blank">SATIN AL</a>
-        </div>
-      </div>
+<!-- ÜRÜNLER -->
+<div class="section">
+<h2>Satış Paketleri</h2>
 
-      <div class="card">
-        <img src="PUBGEMULATOR.jpg" class="card-img">
-        <div class="card-content">
-          <h3>⚡ PUBG MOBILE EMULATOR HACK</h3>
-          <p>HAFTALIK</p>
-          <div class="price">400 TL</div>
-          <p>AYLIK</p>
-          <div class="price">900 TL</div>
-          <p>SINIRSIZ</p>
-          <div class="price">4000 TL</div>
-          <a href="https://discord.gg/BavNPK942y" target="_blank">SATIN AL</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="IMG_0110.jpg" class="card-img">
-        <div class="card-content">
-          <h3>⚡ PUBG MOBILE iOS HACK</h3>
-          <p>GÜNLÜK</p>
-          <div class="price">300 TL</div>
-          <p>HAFTALIK</p>
-          <div class="price">700 TL</div>
-          <p>AYLIK</p>
-          <div class="price">1100 TL</div>
-          <a href="https://discord.gg/BavNPK942y" target="_blank">SATIN AL</a>
-        </div>
-      </div>
-
+<div class="cards">
+  <div class="card">
+    <img src="pubgfoto2.jpeg" class="card-img">
+    <div class="card-content">
+      <h3>PUBG ANDROID</h3>
+      <div class="price">700 TL</div>
+      <a href="https://discord.gg/BavNPK942y">SATIN AL</a>
     </div>
   </div>
 
-  <!-- NEDEN BİZ -->
-  <div class="section">
-    <h2>NEDEN BİZ ?</h2>
-
-    <div class="trust">
-      <div>
-        <h3>🛡️ Güvenilir Satıcı</h3>
-        <p>Uzun süredir dijital satış sektöründe aktif ve güvenilir hizmet.</p>
-      </div>
-      <div>
-        <h3>⚙️ Satış Sonrası Destek</h3>
-        <p>Satın aldıktan sonra da birebir destek sağlıyoruz.</p>
-      </div>
+  <div class="card">
+    <img src="PUBGEMULATOR.jpg" class="card-img">
+    <div class="card-content">
+      <h3>🔥 EN ÇOK SATAN<br>PUBG EMULATOR</h3>
+      <div class="price">900 TL</div>
+      <a href="https://discord.gg/BavNPK942y">SATIN AL</a>
     </div>
-
-    <!-- SİSTEM ÖZELLİKLERİ (BAŞLIKSIZ) -->
-    <div class="system-wide">
-      <ul>
-        <li>✔ %100 Dijital Teslimat</li>
-        <li>✔ Anında Discord Destek</li>
-        <li>✔ Sorunsuz & Güvenli Alışveriş</li>
-        <li>✔ Aktif ve Online Satıcı</li>
-      </ul>
-    </div>
-
   </div>
+
+  <div class="card">
+    <img src="IMG_0110.jpg" class="card-img">
+    <div class="card-content">
+      <h3>PUBG iOS</h3>
+      <div class="price">1100 TL</div>
+      <a href="https://discord.gg/BavNPK942y">SATIN AL</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- NEDEN BİZ -->
+<div class="section">
+<h2>NEDEN BİZ ?</h2>
+
+<div class="trust">
+  <div>
+    <h3>🛡️ Güvenilir Satıcı</h3>
+    <p>Uzun süredir sektörde aktif ve güvenilir hizmet.</p>
+  </div>
+  <div>
+    <h3>⚙️ Satış Sonrası Destek</h3>
+    <p>Satın aldıktan sonra da birebir destek.</p>
+  </div>
+</div>
+
+<div class="values">
+  <div class="value-card">
+    <h3>⚡ Hızlı Teslimat</h3>
+    <p>Dijital ürünler anında teslim edilir.</p>
+  </div>
+  <div class="value-card">
+    <h3>💬 Canlı Discord Destek</h3>
+    <p>Satış öncesi ve sonrası birebir destek.</p>
+  </div>
+  <div class="value-card">
+    <h3>🔒 Güvenli Altyapı</h3>
+    <p>Sorunsuz ve risksiz alışveriş.</p>
+  </div>
+  <div class="value-card">
+    <h3>🟢 Aktif Satıcı</h3>
+    <p>Her gün online, hızlı geri dönüş.</p>
+  </div>
+</div>
+</div>
+
+<!-- ALT CTA -->
+<div class="section" style="text-align:center;">
+  <h2>Hazırsan Discord’a Katıl</h2>
+  <a href="https://discord.gg/BavNPK942y" class="btn">HEMEN KATIL</a>
+</div>
 
 </div>
 
