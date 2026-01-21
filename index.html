@@ -173,12 +173,21 @@ body{
     width:90px;
   }
   /* LOGO */
+/* STATİK LOGO – KÜÇÜK + NEON ÇERÇEVE */
 .logo{
-  width:110px;
-  margin-bottom:18px;
-  filter: drop-shadow(0 0 18px #7a00ff);
-  animation: float 4s ease-in-out infinite;
-  pointer-events: none;
+  width:80px;                 /* KÜÇÜK BOYUT */
+  padding:10px;
+  margin-bottom:20px;
+  border-radius:14px;
+
+  border:1.5px solid rgba(122, 0, 255, 0.8);
+  box-shadow:
+    0 0 12px rgba(122, 0, 255, 0.6),
+    inset 0 0 8px rgba(122, 0, 255, 0.35);
+
+  background:#0b0018;
+
+  pointer-events:none;        /* TIKLANAMAZ */
 }
 
 /* FLOAT ANİMASYON */
