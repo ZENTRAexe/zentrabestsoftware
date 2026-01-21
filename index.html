@@ -14,28 +14,7 @@
   --text:#eaeaea;
   --green:#00ff9c;
 }
-
-/* SATIŞ KARTLARI – NEON ÇERÇEVE */
-.card{
-  position: relative;
-  border: 1.5px solid rgba(122, 0, 255, 0.6);
-  box-shadow: 
-    0 0 12px rgba(122, 0, 255, 0.25),
-    inset 0 0 10px rgba(122, 0, 255, 0.15);
-  transition: all 0.3s ease;
-}
-
-/* HOVER EFEKTİ */
-.card:hover{
-  transform: translateY(-6px) scale(1.01);
-  border-color: rgba(177, 0, 255, 0.9);
-  box-shadow:
-    0 0 22px rgba(177, 0, 255, 0.6),
-    inset 0 0 14px rgba(177, 0, 255, 0.25);
-}
-
 *{box-sizing:border-box}
-
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
@@ -149,79 +128,15 @@ body{
   color:#00ff9c;
   font-weight:bold;
   padding:4px 0
-  }
-/* TRUST SECTION */
-.trust-section{
-  margin-top:120px;
-  padding:70px 25px;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:100px;
+  padding:40px;
   text-align:center;
-  border-radius:24px;
-  border:1.5px solid #2b0055;
-  box-shadow:0 0 45px #3a006660;
-}
-
-.trust-section h2{
-  color:#d39cff;
-  font-size:34px;
-  margin-bottom:10px;
-}
-
-.trust-sub{
-  color:#bfbfbf;
-  margin-bottom:55px;
-  font-size:15px;
-}
-
-/* GRID */
-.trust-cards{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:30px;
-}
-
-@media(max-width:1000px){
-  .trust-cards{grid-template-columns:repeat(2,1fr);}
-}
-@media(max-width:600px){
-  .trust-cards{grid-template-columns:1fr;}
-}
-
-/* CARD */
-.trust-card{
-  background:linear-gradient(180deg,#140022,#0f0f1f);
-  padding:30px 24px;
-  border-radius:20px;
-  border:1.5px solid rgba(122,0,255,.6);
-  box-shadow:
-    0 0 18px rgba(122,0,255,.35),
-    inset 0 0 12px rgba(122,0,255,.2);
-  transition:all .35s ease;
-}
-
-.trust-card:hover{
-  transform:translateY(-10px) scale(1.04);
-  border-color:rgba(177,0,255,.95);
-  box-shadow:
-    0 0 34px rgba(177,0,255,.8),
-    inset 0 0 18px rgba(177,0,255,.35);
-}
-
-.trust-icon{
-  font-size:36px;
-  display:block;
-  margin-bottom:16px;
-}
-
-.trust-card h3{
-  color:#00ff9c;
-  margin-bottom:10px;
-  font-size:18px;
-}
-
-.trust-card p{
-  color:#dcdcdc;
-  font-size:14.5px;
-  line-height:1.6;
+  color:#888;
+  border-top:1px solid #26004d
 }
 </style>
 </head>
@@ -231,12 +146,10 @@ body{
 
 <!-- HERO -->
 <div class="hero">
-
-  <!-- HAREKETLİ LOGO -->
   <h1>ZENTRA MARKET</h1>
   <p>Discord üzerinden profesyonel dijital satış</p>
   <div class="status"><span></span> ONLINE • SATIŞ AKTİF</div><br><br>
-  <a class="btn" href="https://discord.gg/6zyM7Q6WKB" target="_blank">DİSCORDA KATIL</a>
+  <a class="btn" href="#">DİSCORD'A KATIL</a>
 </div>
 
 <!-- PRODUCTS -->
@@ -250,8 +163,8 @@ body{
 
 <div class="price-box">
   <div class="price-row"><span>1 Sezon</span><span class="price">700 TL</span></div>
-  <div class="price-row"><span>Life Time</span><span class="price">2800 TL</span></div>
-  <a class="btn" href="https://discord.gg/6zyM7Q6WKB" target="_blank">SATIN AL</a>
+  <div class="price-row"><span>Sınırsız</span><span class="price">1400 TL</span></div>
+  <a class="btn" href="#">SATIN AL</a>
 </div>
 
 <div class="feature-group">
@@ -267,7 +180,7 @@ body{
   <ul>
     <li>Player / Loot ESP</li>
     <li>Vehicle ESP</li>
-    <li>Anti Ban System / Bypass</li>
+    <li>Anti Ban System</li>
   </ul>
 </div>
 </div>
@@ -281,23 +194,8 @@ body{
 <div class="price-box">
 <div class="price-row"><span>Haftalık</span><span class="price">400 TL</span></div>
 <div class="price-row"><span>Aylık</span><span class="price">900 TL</span></div>
-<div class="price-row"><span>Life Time</span><span class="price">4000 TL</span></div>
-<a class="btn" href="https://discord.gg/6zyM7Q6WKB" target="_blank">SATIN AL</a>
-  </div>
-
-  <div class="feature-group">
-  <h4>Aim Features</h4>
-  <ul>
-    <li>Aimbot / Magic Bullet</li>
-    <li>No Recoil / No Spread</li>
-  </ul>
-</div>
-
-<div class="feature-group">
-  <h4>ESP Features</h4>
-  <ul>
-    <li>Player / Loot ESP / Vehicle ESP</li>
-    <li>Anti Ban System / Bypass</li>
+<div class="price-row"><span>Sınırsız</span><span class="price">4000 TL</span></div>
+<a class="btn" href="#">SATIN AL</a>
 </div>
 </div>
 </div>
@@ -311,24 +209,7 @@ body{
 <div class="price-row"><span>Günlük</span><span class="price">300 TL</span></div>
 <div class="price-row"><span>Haftalık</span><span class="price">700 TL</span></div>
 <div class="price-row"><span>Aylık</span><span class="price">1100 TL</span></div>
-<a class="btn" href="https://discord.gg/6zyM7Q6WKB" target="_blank">SATIN AL</a>
-  </div>
-
-<div class="feature-group">
-  <h4>Aim Features</h4>
-  <ul>
-    <li>Aimbot / Magic Bullet</li>
-    <li>No Recoil / No Spread</li>
-  </ul>
-</div>
-
-<div class="feature-group">
-  <h4>ESP Features</h4>
-  <ul>
-    <li>Player / Loot ESP</li>
-    <li>Vehicle ESP</li>
-    <li>Anti Ban System / Bypass</li>
-  </ul>
+<a class="btn" href="#">SATIN AL</a>
 </div>
 </div>
 </div>
@@ -343,101 +224,7 @@ body{
 <div class="price-row"><span>1 Hafta</span><span class="price">3000 TL</span></div>
 <div class="price-row"><span>1 Ay</span><span class="price">4000 TL</span></div>
 <div class="price-row"><span>Life Time</span><span class="price">15000 TL</span></div>
-<a class="btn" href="https://discord.gg/6zyM7Q6WKB" target="_blank">SATIN AL</a>
-  </div>
-  <div class="feature-group">
-  <h4>Aim</h4>
-  <ul>
-    <li>Enable (Toggle Aimbot)</li>
-    <li>Recoil Control</li>
-    <li>Visible Check</li>
-    <li>No Spread</li>
-    <li>Auto Shoot (Rage)</li>
-    <li>Show FOV</li>
-    <li>Field Of View</li>
-    <li>Smoothness</li>
-    <li>Smoothness Slider</li>
-    <li>Aim Bone</li>
-    <li>Select Aimbone (Head / Chest / Legs)</li>
-    <li>Silent Aim</li>
-    <li>Anti-Aim</li>
-    <li>Show FOV Rainbow</li>
-    <li>Auto Shoot Speed Slider</li>
-    <li>Recoil Crosshair</li>
-  </ul>
-</div>
-
-<div class="feature-group">
-  <h4>Visuals / ESP</h4>
-  <ul>
-    <li>Box ESP (3D)</li>
-    <li>Skeleton</li>
-    <li>Head / Name ESP</li>
-    <li>Agent / Weapon Icon</li>
-    <li>Distance ESP</li>
-    <li>Enemy Fresnel</li>
-    <li>Health + Armor Bar</li>
-    <li>Snapline</li>
-    <li>Minimap Radar</li>
-    <li>Load Skin</li>
-    <li>Custom Icon</li>
-    <li>Bullet Trace</li>
-  </ul>
-</div>
-
-<div class="feature-group">
-  <h4>World / ESP Settings</h4>
-  <ul>
-    <li>Spike Info</li>
-    <li>Abilities ESP</li>
-    <li>Fresnel RGB + Intensity</li>
-    <li>Night Mode / Devil Mode</li>
-    <li>Apply Wukong</li>
-    <li>Skybox Changer</li>
-    <li>Live / Rainbow Sky</li>
-    <li>Galaxy Gun</li>
-    <li>China Hat / Enemy</li>
-    <li>Gun & Third Person Wireframe</li>
-  </ul>
-</div>
-
-<div class="feature-group">
-  <h4>Outlines</h4>
-  <ul>
-    <li>Enemy Chams</li>
-    <li>Galaxy Enemy / Self</li>
-    <li>Always Outline</li>
-    <li>Intensity Visible / Invisible</li>
-    <li>Rainbow Speed</li>
-    <li>Hand Fresnel</li>
-    <li>Rainbow Color</li>
-  </ul>
-</div>
-
-<div class="feature-group">
-  <h4>Misc</h4>
-  <ul>
-    <li>Config Save / Load</li>
-    <li>Unlock All</li>
-    <li>Finishers / Last Kill</li>
-    <li>Gun Buddy Changer + IDs</li>
-    <li>Skip Tutorial</li>
-    <li>Wireframe Hand</li>
-    <li>Custom Aspect Ratio</li>
-    <li>Custom Local FOV</li>
-    <li>Viewmodel Changer</li>
-    <li>Kill Say</li>
-    <li>No Smoke / Walls</li>
-    <li>Third Person / Big Gun 3P</li>
-    <li>Anti-Flash</li>
-  </ul>
-</div>
-
-<div class="premium-box">
-  <ul>
-    <li>🔥 Built-in Vanguard Emulator</li>
-    <li>🔥 Built-in Permanent Spoofer</li>
-  </ul>
+<a class="btn" href="#">SATIN AL</a>
 </div>
 </div>
 </div>
@@ -450,39 +237,7 @@ body{
 <div class="price-box">
   <div class="price-row"><span>One Time</span><span class="price">650 TL</span></div>
 <div class="price-row"><span>Life Time</span><span class="price">1700 TL</span></div>
-<a class="btn" href="https://discord.gg/6zyM7Q6WKB" target="_blank">SATIN AL</a>
-</div>
-  
-  <div class="feature-group">
-  <h4>Supported Games / Anti-Cheat</h4>
-  <ul>
-    <li>VALORANT (Vanguard)</li>
-    <li>League of Legends (Vanguard)</li>
-    <li>Fortnite (EAC)</li>
-    <li>Apex Legends (EAC)</li>
-    <li>BattlEye (BE)</li>
-  </ul>
-</div>
-
-<div class="feature-group">
-  <h4>Hardware Spoofing</h4>
-  <ul>
-    <li>Motherboard Spoofing</li>
-    <li>CPU Spoofing</li>
-    <li>RAM Spoofing</li>
-    <li>SSD / HDD Spoofing</li>
-    <li>GPU Spoofing</li>
-    <li>MAC Address Spoofing</li>
-    <li>TPM On / Off Control</li>
-  </ul>
-</div>
-
-<div class="premium-box">
-  <ul>
-    <li>🔥 PERM Spoof (Until I Reinstall Windows)</li>
-    <li>🔥 No BIOS Flash Required</li>
-    <li>🔥 No Windows Reinstall Needed</li>
-  </ul>
+<a class="btn" href="#">SATIN AL</a>
 </div>
 </div>
 </div>
@@ -494,69 +249,19 @@ body{
 <h3>⚡ ONE CLICK SPOOFER</h3>
 <div class="price-box">
 <div class="price-row"><span>1 Ay</span><span class="price">3200 TL</span></div>
-<div class="price-row"><span>Life Time</span><span class="price">6500 TL</span></div>
-<a class="btn" href="https://discord.gg/6zyM7Q6WKB" target="_blank">SATIN AL</a>
+<div class="price-row"><span>Lifetime</span><span class="price">6500 TL</span></div>
+<a class="btn" href="#">SATIN AL</a>
 </div>
-  
-  <div class="feature-group">
-  <h4>Information</h4>
-  <ul>
-    <li>One Click Activation – Full system spoof with a single click</li>
-    <li>No Reinstall • No BIOS Flash • No Risk</li>
-    <li>Safe spoofing without touching BIOS or OS files</li>
-  </ul>
+</div>
 </div>
 
-<div class="feature-group">
-  <h4>System Compatibility</h4>
-  <ul>
-    <li>Operating Systems: Windows 10 & Windows 11</li>
-    <li>Processors: AMD & Intel</li>
-    <li>Graphics Cards: NVIDIA & AMD GPUs</li>
-    <li>Security: TPM • HVCI • Secure Boot Compatible</li>
-  </ul>
 </div>
 
-<div class="feature-group">
-  <h4>What We Spoof</h4>
-  <ul>
-    <li>TPM 2.0</li>
-    <li>Motherboard / BIOS</li>
-    <li>CPU</li>
-    <li>RAM</li>
-    <li>HDD & SSD (Serial & ID)</li>
-    <li>MAC Address</li>
-    <li>GPU</li>
-    <li>SMBIOS & More</li>
-  </ul>
-</div>
-
-<div class="feature-group">
-  <h4>Why Choose This Spoofer?</h4>
-  <ul>
-    <li>No BIOS flash required</li>
-    <li>No Windows reinstall needed</li>
-    <li>Works on laptops & desktops</li>
-    <li>Fully stealth – no traces left</li>
-    <li>Instant setup in under 2 minutes</li>
-  </ul>
-</div>
-
-<div class="premium-box">
-  <ul>
-    <li>🔥 One Click – Instant Activation</li>
-    <li>🔥 Full System Spoof</li>
-    <li>🔥 Safe & Undetected</li>
-  </ul>
-</div>
-</div>
-</div>
-  
-</div>
-<!-- FOOTER -->
 <div class="footer">
-  © 2026 ZENTRA MARKET<br>
-  Unauthorized copying prohibited.
+© 2026 ZENTRA MARKET<br>
+Unauthorized copying prohibited.
 </div>
 
-</div> <!-- 🔴 SADECE BURADA container kapanır -->
+</div>
+</body>
+</html>
