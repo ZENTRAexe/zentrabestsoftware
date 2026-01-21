@@ -14,13 +14,35 @@
   --text:#eaeaea;
   --green:#00ff9c;
 }
+
+/* SATIŞ KARTLARI – NEON ÇERÇEVE */
+.card{
+  position: relative;
+  border: 1.5px solid rgba(122, 0, 255, 0.6);
+  box-shadow: 
+    0 0 12px rgba(122, 0, 255, 0.25),
+    inset 0 0 10px rgba(122, 0, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFEKTİ */
+.card:hover{
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(177, 0, 255, 0.9);
+  box-shadow:
+    0 0 22px rgba(177, 0, 255, 0.6),
+    inset 0 0 14px rgba(177, 0, 255, 0.25);
+}
+
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   background:radial-gradient(circle at top,#120025,var(--bg));
   color:var(--text);
 }
+  </style>
 .container{max-width:1300px;margin:auto;padding:40px 20px}
 
 /* HERO */
