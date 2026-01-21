@@ -172,6 +172,27 @@ body{
   .logo-video{
     width:90px;
   }
+  /* LOGO */
+.logo{
+  width:110px;
+  margin-bottom:18px;
+  filter: drop-shadow(0 0 18px #7a00ff);
+  animation: float 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* FLOAT ANİMASYON */
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+  100%{transform:translateY(0)}
+}
+
+/* MOBİL */
+@media(max-width:700px){
+  .logo{
+    width:85px;
+  }
 </style>
 </head>
 
@@ -182,7 +203,7 @@ body{
 <div class="hero">
 
   <!-- HAREKETLİ LOGO -->
- <img src="logo.png" class="logo" alt="Zentra Market Logo">
+ <img src="ZENTRA SOFTWARE PP.jpg" class="logo" alt="Zentra Market Logo">
   <h1>ZENTRA MARKET</h1>
   <p>Discord üzerinden profesyonel dijital satış</p>
   <div class="status"><span></span> ONLINE • SATIŞ AKTİF</div><br><br>
